@@ -160,10 +160,11 @@ GRANT SELECT ON categories,suppliers,warehouses,products,inventory,purchase_orde
  stock_movements,low_stock_alerts,anomaly_logs,v_inventory_report,v_purchase_order_totals,v_pattern_features
  TO smartvault_admin,smartvault_staff;
 GRANT SELECT(user_id,full_name,email,role) ON app_users TO smartvault_admin,smartvault_staff;
+GRANT SELECT(user_id,email) ON app_users TO smartvault_auth;
 GRANT INSERT,UPDATE,DELETE ON categories,suppliers,warehouses,products TO smartvault_admin;
 GRANT USAGE,SELECT ON ALL SEQUENCES IN SCHEMA smartvault TO smartvault_admin;
 REVOKE EXECUTE ON ALL FUNCTIONS IN SCHEMA smartvault FROM PUBLIC;
-GRANT EXECUTE ON FUNCTION login_record(text),get_session_user(integer) TO smartvault_auth;
+GRANT EXECUTE ON FUNCTION login_record(text),get_session_user(integer),create_app_user(text,text,text,text) TO smartvault_auth;
 GRANT EXECUTE ON FUNCTION record_movement(integer,integer,integer,text,integer,integer,text),
  create_purchase_order(integer,integer,integer,jsonb) TO smartvault_admin,smartvault_staff;
 GRANT EXECUTE ON FUNCTION receive_purchase_order(integer,integer),cancel_purchase_order(integer),initialize_inventory(),

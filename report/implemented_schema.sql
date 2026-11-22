@@ -2,10 +2,8 @@
 -- PostgreSQL database dump
 --
 
-\restrict oHzhEH14CqFZTW4tmO2wqwF8xd4Ryg0vKa1fjSLw2E6Jw9cku3kzlr3UorRUOsf
-
--- Dumped from database version 18.6
--- Dumped by pg_dump version 18.6
+-- Dumped from database version 17.2
+-- Dumped by pg_dump version 17.2
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -1433,4 +1431,3 @@ GRANT SELECT,USAGE ON SEQUENCE smartvault.warehouses_warehouse_id_seq TO smartva
 -- PostgreSQL database dump complete
 --
 
-\unrestrict oHzhEH14CqFZTW4tmO2wqwF8xd4Ryg0vKa1fjSLw2E6Jw9cku3kzlr3UorRUOsf
